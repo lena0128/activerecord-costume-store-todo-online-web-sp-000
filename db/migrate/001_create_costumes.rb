@@ -11,8 +11,13 @@ class CreateCostumes < ActiveRecord::Migration[5.1]
 # value types according to the spec
 
 def change
-create_table :costumes do |c|
-  c.string :name
+  create_table :costumes do |t|
+    t.string :name
+    t.float :price
+    t.string :image_url
+    t.string :size
+    t.timestamps
+  end
 end
 
 
